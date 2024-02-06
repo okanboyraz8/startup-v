@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+:root {
+    --primary-color-hue: 252;
+
+    --color-dark-light-theme: 17%;
+    --color-light-light-theme: 95%;
+    --color-white-light-theme: 100%;
+
+    --color-white: hsl(252, 30%, var(--color-white-light-theme));
+    --color-light: hsl(252, 30%, var(--color-light-light-theme));
+    --color-gray: hsl(252, 15%, 60%);
+    --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 60%);
+    --color-danger: hsl(0, 95%, 60%);
+    --color-dark: hsl(252, 30%, var(--color-dark-light-theme));
+    --color-black: hsl(252, 30%, 8%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+
+    --btn-padding: .6rem 2rem;
+
+    --search-padding: .6rem 1rem;
+    --card-padding: 1rem;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    /* overflow: hidden; */
+}
+
+/* ===================== CUSTOM STYLE ===================== */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.profile-picture {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture:hover {
+    opacity: 0.75;
+}
+
+.btn {
+    padding: var(--btn-padding);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 300ms ease all;
+}
+
+.btn:hover {
+    opacity: 0.75;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-gry {
+    color: var(--color-gray);
+}
+
+/* ===================== JavaScript Other Classes ===================== */
+.boxshadow1 {
+    box-shadow: 0 0 0.5rem var(--color-primary);
+}
+
+.liked {
+    /* 1.38:07 => to work w/ liked */
+    font-weight: bold !important;
+    color: var(--color-danger);
+    transform: scale(1.1);
+}
+
+.icon-bg {
+    background: var(--color-dark);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+/* ===========================================================================================================
+==============================================================================================================
+============================== START MEDIA QUERYES ======================================================== */
+
+/* MAX WIDTH (1200PX) */
+@media (max-width:1200px) {
+    .container {
+        width: 96%;
+    }
+    .main-container {
+        grid-template-columns: auto 30vw;
+    }
+    .main-left {
+        width: 6rem;
+        z-index: 5;
+        position: fixed;
+        left: 0;
+        top: 10%;
+    }
+    .main-container .main-left .profile {
+        display: none;
+    }
+    aside h3 {
+        display: none;
+    }
+    aside .menu-item span img {
+        margin-left: 1.5rem;
+    }
+    aside .btn {
+        display: none;
+    }
+}
+
+/* MAX WIDTH (991px) */
+@media (max-width:991px) {
+    nav .search-bar {
+        display: none;
+    }
+    .main-container {
+        grid-template-columns: auto 0;
+    }
+    .main-right {
+        display: none;
+    }
+    .main-left {
+        right: 0;   
+        top: 16%;
+        position: fixed;     
+    }
+}

@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.single-content {
+    text-align: center;
+    margin-top: 0;
+}
+
+.single-content .single-category, .single-content .single-blog-title {
+    font-style: italic;
+    color: pink;
+}
+
+.single-content .single-blog-meta {
+    font-size: small;
+    font-style: oblique;
+    color: gray;
+}

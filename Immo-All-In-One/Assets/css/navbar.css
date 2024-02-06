@@ -1,0 +1,114 @@
+/* ===================== START NavBar ===================== */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: .7rem 0;
+  background: var(--color-white);
+  box-shadow: var(--color-primary) 0 0 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .search-bar {
+  padding: var(--search-padding);
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+nav .search-bar input[type="search"] {
+  background: transparent;
+  width: 30vw;
+  margin-left: 1rem;
+  font-size: .9rem;
+  color: var(--color-dark);
+}
+
+nav .search-bar input[type="search"]::placeholder {
+  color: var(--color-gray);
+}
+
+.add-post {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  user-select: none;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+/* ===================== END NavBar ===================== */
+
+/* Dropdown Button */
+.dropbtn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--btn-padding);
+  display: inline-block;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 300ms ease all;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  opacity: 0.75;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  min-width: 160px;
+  box-shadow: var(--color-primary) 0 0 1rem;
+  z-index: 1;
+  margin-top: 2rem;
+  margin-left: -2rem;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  border-radius: var(--card-border-radius);
+  color: var(--color-primary);
+  background-color: white;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
